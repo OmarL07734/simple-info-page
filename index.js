@@ -17,16 +17,17 @@ const animateBubble = x => {
 if(!isMobile){
   window.onmousemove = e => animateBubble(e.clientX);
 }else{
-  startingPos = window.screen.width;
-  currentPos = startingPos;
-  endingPos = window.screenX;
-  var interval = setInterval(function(){
-    animateBubble(currentPos);
-    currentPos -= 100;
-    if(currentPos <= endingPos){
-      currentPos = startingPos;
-    }
-  }, 200); 
+  window.ontouchmove = e => animateBubble(e.clientX);
+  // startingPos = window.screen.width;
+  // currentPos = startingPos;
+  // endingPos = window.screenX;
+  // var interval = setInterval(function(){
+  //   animateBubble(currentPos);
+  //   currentPos -= 100;
+  //   if(currentPos <= endingPos){
+  //     currentPos = startingPos;
+  //   }
+  // }, 200); 
   
 }
 
