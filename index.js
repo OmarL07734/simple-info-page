@@ -1,5 +1,5 @@
 const wrapper = document.getElementById("bubble-wrapper");
-const isMobile = navigator.userAgentData.mobile;
+const isMobile = checkMobile();
 
 const animateBubble = x => {
   const bubble = document.createElement("div");
@@ -28,4 +28,9 @@ if(!isMobile){
     }
   }, 200); 
   
+}
+
+
+function checkMobile(){
+  return ( ( window.innerWidth <= 800 ) && ( window.innerHeight <= 600 ) );
 }
