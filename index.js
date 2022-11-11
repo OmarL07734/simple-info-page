@@ -17,7 +17,7 @@ const animateBubble = x => {
 if(!isMobile){
   window.onmousemove = e => animateBubble(e.clientX);
 }else{
-  window.ontouchmove = e => animateBubble(e.clientX);
+  window.ontouchmove = e => animateBubble(e.touches[0].clientX;);
   // startingPos = window.screen.width;
   // currentPos = startingPos;
   // endingPos = window.screenX;
